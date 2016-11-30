@@ -10,7 +10,7 @@ class Empresa(models.Model):
 
 
 class Vacante(models.Model):
-	titulo = models.CharField(max_length=140)
+	titulo = models.CharField(max_length=1000)
 	empresa = models.ForeignKey(Empresa, related_name='vacantes')
 	aplicantes = models.ManyToManyField(User, related_name='vacantes', blank=True, null=True)
 
